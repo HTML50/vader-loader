@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>May the force be with you</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<style>
+@import url(http://fonts.useso.com/css?family=Droid+Sans:400,700);
+
+*{margin:0;padding:0}
+html,body {height:100%;text-align:center;background:#000 url("bg.png") fixed;overflow:hidden;font-family: "Droid Sans", arial, verdana, sans-serif;font-weight: 700;color: #ff6;
+}
+</style>
+<body>
+<p id="start" style="opacity: 0;">A long time ago in a galaxy far, far away&hellip;</p>
+<h1 style="opacity: 0;"><img src="starwars.png"></h1>
+<div id="titles"><div id="titlecontent" style="opacity:0;">
+<p class="center"><h2>STARWARS</h2></p>
+<p class="center"><h2>js loader</h2></p>
+<p></p>
+<br><br>
+<p class="center"><a href="https://github.com/html50/vader-loader" target=_blank><br />DOWNLOAD NOW</a></p>
+<p>Hi, Im 2byte, i made this STARWARS javascript loading bar for fun and also learn some basic knowledge.</p>
+<p>this loader may only work on Chrome which i tested, i do not do the compatible work.</p>
+<p>for this Star Wars-style scrolling 3D titles, you can find it on the author's website</p>
+<p class="center"><a href="http://www.sitepoint.com/css3-starwars-scrolling-text/" target=_blank><br />css3-starwars-scrolling-text/</a></p>
+<p>I add the STARWARS theme for it, and change some settings.</p>
+<p>well, if you like the loader, you can download it on my github</p>
+<p class="center"><a href="https://github.com/html50/vader-loader" target=_blank><br />https://github.com/html50/vader-loader</a></p>
+<p>there is noly one js file, vader-loader.js, put it in body area and you will get a STARWARS style loader.</p>
+<p></p>
+<p>now here goes some other paragraph, because if not, the effect will look like not good.</p>
+<p>so, lets talk the movie, it is a really good one, isnt it?<p>
+<p>I dont like IE, chrome is fine for me. In China, you can not get access to Google, facebook, twitter and youtube, etc.</p>
+<p>so if you have good ways to get out of the GREAT FIREWALL, plz let me know</p>
+<p class="center">whoisfrank"at"foxmail.com</p>
+<p>I like cool stuff, if you like my work, you can find something else at my github</p>
+<p>the length seems enough, i will stop here, peace</p>
+</div>
+</div>
+<audio id="myMusic" src="http://m2.music.126.net/PnRB3CSugaUwypV9xf7MUA==/5685574627307498.mp3" loop></audio>
+<script>
+var checkID=setInterval(check,50)
+function check(){
+if(isLoaded){
+setTimeout(function(){
+ var css=document.createElement("link");
+    css.type="text/css";
+	css.rel="stylesheet";
+    css.href="animation.css";
+    document.getElementsByTagName("head")[0].appendChild(css);
+	setTimeout(function(){document.getElementById("titlecontent").style.opacity=1;},100)
+	setTimeout(function(){document.getElementById("myMusic").play();},2000)
+},2000)
+clearInterval(checkID)
+}
+}
+</script>
+</body>
+<script src="vader-loader.js"></script>
+</html>

@@ -10,10 +10,12 @@
 @import url(http://fonts.useso.com/css?family=Droid+Sans:400,700);
 
 *{margin:0;padding:0}
-html,body {height:100%;text-align:center;background:#000 url("bg.png") fixed;overflow:hidden;font-family: "Droid Sans", arial, verdana, sans-serif;font-weight: 700;color: #ff6;
+html,body {height:100%;text-align:center;background:#000 url("bg.jpg") no-repeat 100%;overflow:hidden;font-family: "Droid Sans", arial, verdana, sans-serif;font-weight: 700;color: #fbf516;
 }
 </style>
 <body>
+<script src="vader-loader.js"></script>
+<img src="bg.jpg" width=0>
 <p id="start" style="opacity: 0;">A long time ago in a galaxy far, far away&hellip;</p>
 <h1 style="opacity: 0;"><img src="starwars.png"></h1>
 <div id="titles"><div id="titlecontent" style="opacity:0;">
@@ -34,10 +36,12 @@ html,body {height:100%;text-align:center;background:#000 url("bg.png") fixed;ove
 <p>now here goes some other paragraph, because if not, the effect will look like not good.</p>
 <p>so, lets talk the movie, it is a really good one, isnt it?<p>
 <p>I dont like IE, chrome is fine for me. In China, you can not get access to Google, facebook, twitter and youtube, etc.</p>
-<p>so if you have good ways to get out of the GREAT FIREWALL, plz let me know</p>
+<p>so if you have good ways to get out of the GREAT FIREWALL, plz email me</p>
 <p class="center">whoisfrank"at"foxmail.com</p>
 <p>I like cool stuff, if you like my work, you can find something else at my github</p>
-<p>the length seems enough, i will stop here, peace</p>
+<p class="center"><a href="https://github.com/html50/vader-loader" target=_blank><br />my Github</a></p>
+<p>the length seems to be enough, i will stop here, peace</p>
+
 </div>
 </div>
 <audio id="myMusic" src="http://m2.music.126.net/PnRB3CSugaUwypV9xf7MUA==/5685574627307498.mp3" loop></audio>
@@ -51,13 +55,12 @@ setTimeout(function(){
 	css.rel="stylesheet";
     css.href="animation.css";
     document.getElementsByTagName("head")[0].appendChild(css);
-	setTimeout(function(){document.getElementById("titlecontent").style.opacity=1;},100)
-	setTimeout(function(){document.getElementById("myMusic").play();},2000)
+	setTimeout(function(){document.getElementById("titlecontent").style.opacity=1;},1000)
+	setTimeout(function(){document.getElementById("myMusic").play();},2200)
 },2000)
 clearInterval(checkID)
 }
 }
 </script>
 </body>
-<script src="vader-loader.js"></script>
 </html>

@@ -1,6 +1,7 @@
 var thisBody = document.body; 
 var div = document.createElement("div"); 
 var isLoaded;
+var isPaused;
 div.style.paddingTop="30px"
 div.style.position="absolute"
 div.style.left="0"
@@ -52,11 +53,19 @@ function fadeOut(){
 
 
 function start(){
-    if(progress<1000){
-        vaderProgress.style.width=progress/10+"%"
+    if(progress<1800 && selfAdd==1){
+        vaderProgress.style.width=progress/20+"%"
         progress+=selfAdd;
     }
-    else{
+	else if(progress>1800 && progress<2000 && selfAdd==1){
+		clearInterval(progressID)
+		isPaused=true;
+	}
+	else if(progress<2000 && selfAdd==10){
+		vaderProgress.style.width=progress/20+"%"
+        progress+=selfAdd;
+	}
+    else if(progress==2000){
         clearInterval(progressID)
 		progressID = window.setInterval(fadeOut,10)
     }
@@ -65,8 +74,12 @@ function start(){
 
 document.onreadystatechange = function(){     
         if(document.readyState=="complete")     
-        {     
-        selfAdd=5
+        {  
+		selfAdd=10	
+		if(isPaused){
+		progressID = window.setInterval(start,10)
+		isPaused=false;
+		}
         }   
 }   
 

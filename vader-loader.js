@@ -24,7 +24,6 @@ var selfAdd=1;
 
 progressID = window.setInterval(fadeIn,10)
 
-
 function fadeIn(){
 	if(loadingDivOpacity<1){
 		loadingDiv.style.opacity=loadingDivOpacity
@@ -49,7 +48,6 @@ function fadeOut(){
 	}
 	
 }
-
 
 
 function start(){
